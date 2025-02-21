@@ -3,21 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>Denise Yeo</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Courier Prime', serif;
+            line-height: 1.4;
+            font-size: 14px;
             margin: 0;
-            padding: 20px;
             max-width: 800px;
             margin: 0 auto;
         }
         
-        header {
+        h1 {
             text-align: center;
-            padding: 20px 0;
-            border-bottom: 2px solid #eee;
+            font-family: 'Silkscreen', serif;
+            font-size: 40px;
+            background: -webkit-linear-gradient(#000000, #6c6c6c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-family: 'Courier Prime', serif;
+            background: linear-gradient(45deg, #bababa, #ffffff);
+            letter-spacing: 2px;
+            display: inline;
+            line-height: 1.2;
+            font-size: 16px;
+            margin: 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        @keyframes grow-and-shrink {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+        .grow-and-shrink-animation {
+            animation: grow-and-shrink 4000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
         }
         
         nav {
@@ -44,37 +81,19 @@
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
-        <p>Web Developer | Designer | Creator</p>
+        <h1 class ="grow-and-shrink-animation">Denise Yeo</h1>
     </header>
 
-    <nav>
+    <!-- <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-    </nav>
+    </nav> -->
 
     <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome to my portfolio! I'm a passionate developer interested in creating meaningful web experiences.</p>
+        <h2>ABOUT ME</h2>
+        <body><p>I am passionate about analytics, data science and AI.</p></body>
     </section>
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of your first project goes here.</p>
-        </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of your second project goes here</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: your.email@example.com</p>
-        <p>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></p>
-    </section>
 </body>
 </html>
