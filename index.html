@@ -11,7 +11,7 @@
     ██╔══██║██╔══╝░░██║░░░░░██║░░░░░██║░░██║
     ██║░░██║███████╗███████╗███████╗╚█████╔╝
     ╚═╝░░╚═╝╚══════╝╚══════╝╚══════╝░╚════╝░
-    
+
     Thanks for checking out my source code!
     Feel free to connect with me on GitHub: https://github.com/deniseyeo
     
@@ -23,7 +23,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css">
+
     <title>Denise Yeo</title>
     <style>
         /* CSS Reset */
@@ -53,7 +55,7 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         h1 {
             text-align: center;
             font-family: 'Silkscreen', serif;
@@ -76,17 +78,16 @@
             margin-bottom: 20px;
             filter: url(#noise);
         }
-        
-        @keyframes grow-and-shrink {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+
+        a.icon-link {
+            color: #333;
+            text-decoration: none;
         }
 
-        .grow-and-shrink-animation {
-            animation: grow-and-shrink 4s infinite ease-in-out;
+        a.icon-link:hover, a.icon-link:active, a.icon-link:visited {
+            color: #333;
         }
-        
+
         section {
             margin: 40px 0;
         }
@@ -94,10 +95,8 @@
         p {
             margin-bottom: 15px;
         }
-        
+
         .project {
-            /* margin: 20px 0; */
-            /* border: 1px solid #eee; */
             border-radius: 5px;
         }
 
@@ -108,65 +107,12 @@
             margin: 20px 0;
             border-radius: 8px;
         }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            body {
-                padding: 15px;
-            }
-
-            .container {
-                padding: 0 15px;
-            }
-
-            section {
-                margin: 30px 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                font-size: 14px;
-            }
-
-            h1 {
-                margin-bottom: 30px;
-            }
-
-            section {
-                margin: 25px 0;
-            }
-        }
     </style>
 </head>
 <body>
-    <!-- SVG Filter Definition -->
-    <svg>
-        <defs>
-            <filter id="noise" x="0%" y="0%" width="100%" height="100%">
-                <feTurbulence 
-                    type="fractalNoise"
-                    baseFrequency="0.7"
-                    numOctaves="10"
-                    stitchTiles="stitch"
-                    result="noise"/>
-                <feColorMatrix
-                    type="matrix"
-                    values="0.7 0 0 0 0
-                            0 0.7 0 0 0
-                            0 0 0.7 0 0
-                            0 0 0 0.2 0"/>
-                <feBlend
-                    in="SourceGraphic"
-                    in2="noise"
-                    mode="overlay"/>
-            </filter>
-        </defs>
-    </svg>
-
     <div class="container">
         <header>
-            <h1 class="grow-and-shrink-animation">Denise Yeo</h1>
+            <h1>Denise Yeo</h1>
         </header>
 
         <section id="about">
@@ -177,20 +123,14 @@
         <section id="projects">
             <h2>PROJECTS</h2>
             <div class="project">
-                <p> Outside of work, I enjoy building things. Here are some of my personal projects I've worked on: </p>
+                <p>Outside of work, I enjoy building things. Here are some of my personal projects I've worked on:</p>
                 <p><b>Stride: AI-powered Running Plans</b></p>
-                <p>Stride helps runners prepare for races with AI-powered training plans. These plans take into account your goals, training preferences and fitness levels based on your Strava workouts.</p>
-                
-                <p><b>Tools Used</b> FastAPI, LangChain, SQLite, Anthropic API, Strava API, React</p>
-                
+                <p>Stride helps runners prepare for races with AI-powered training plans.</p>
                 <video controls>
                     <source src="https://deniseyeo.github.io/videos/stride.mp4" type="video/mp4">
                 </video>
                 <p><b>Running Coach Chatbot</b></p>
-                <p>A chatbot that helps improve running performance by analyzing data from Strava. It retrieves past activities, processes key metrics, and provides personalized insights.</p>
-                
-                <p><b>Tools Used</b> Flask, LangChain, SQLite, Strava API</p>
-                
+                <p>A chatbot that helps improve running performance by analyzing data from Strava.</p>
                 <video controls>
                     <source src="https://deniseyeo.github.io/videos/running_buddy.mp4" type="video/mp4">
                 </video>
@@ -199,8 +139,7 @@
 
         <section id="contact">
             <h2>CONTACT</h2>
-            <p><b>Email</b> deniseyeosl [AT] gmail</p>
-            <p><b><a href="https://github.com/deniseyeo" class="icon-link" target="_blank"><i class="fab fa-github"></i></a></b></p>
+            <p><b><a href="mailto:deniseyeosl[at]gmail.com" class="icon-link"><i class="fas fa-envelope"></i></a></b> <b><a href="https://github.com/deniseyeo" class="icon-link" target="_blank"><i class="fab fa-github"></i></a></b></p>
         </section>
     </div>
 </body>
