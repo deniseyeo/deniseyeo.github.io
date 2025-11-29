@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+        
+    🔍 WELL HELLO THERE! 👋
+    
+    ██╗░░██╗███████╗██╗░░░░░██╗░░░░░░█████╗░
+    ██║░░██║██╔════╝██║░░░░░██║░░░░░██╔══██╗
+    ███████║█████╗░░██║░░░░░██║░░░░░██║░░██║
+    ██╔══██║██╔══╝░░██║░░░░░██║░░░░░██║░░██║
+    ██║░░██║███████╗███████╗███████╗╚█████╔╝
+    ╚═╝░░╚═╝╚══════╝╚══════╝╚══════╝░╚════╝░
+
+    Thanks for checking out my source code!
+    Feel free to connect with me on GitHub: https://github.com/deniseyeo
+    
+    🎨 Built with curiosity and creativity
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KQFW238J');</script>
+    <!-- End Google Tag Manager -->
+    <title>Denise Yeo</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* SVG Filter for Noise */
+        svg {
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+
+        body {
+            font-family: 'Courier Prime', serif;
+            line-height: 1.6;
+            font-size: 14px;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Silkscreen', serif;
+            font-size: clamp(32px, 6vw, 40px);
+            background: -webkit-linear-gradient(#000000, #a7a7a7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-family: 'Courier Prime', serif;
+            background: linear-gradient(45deg, #bababa, #ffffff);
+            color: rgb(61, 61, 61);
+            letter-spacing: 2px;
+            display: inline-block;
+            line-height: 1.2;
+            font-size: clamp(14px, 4vw, 16px);
+            padding: 2px 6px;
+            margin-bottom: 20px;
+            filter: url(#noise);
+        }
+
+        a.icon-link {
+            color: #333;
+            text-decoration: none;
+        }
+
+        a.icon-link:hover, a.icon-link:active, a.icon-link:visited {
+            color: #333;
+        }
+
+        section {
+            margin: 40px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .project {
+            border-radius: 5px;
+        }
+
+        video {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Denise Yeo</h1>
+        </header>
+
+        <section id="about">
+            <h2>ABOUT ME</h2>
+            <p>Hi 👋 I'm Denise. I am passionate about analytics, data science and AI. I'm based in London and have held numerous roles in data science and analytics.</p>
+        </section>
+
+        <section id="projects">
+            <h2>PROJECTS</h2>
+            <div class="project">
+                <p>Outside of work, I enjoy building things. Here are some of my personal projects I've worked on:</p>
+                <p><b>Stride: AI-powered Running Plans</b></p>
+                <p>Stride helps runners prepare for races with AI-powered training plans.</p>
+
+                <p><b>Tools Used</b> FastAPI, TypeScript, LangChain, Anthropic API, SQLite, Strava API</p>
+                <p><b>Repo                 <b><a href="https://github.com/deniseyeo/stride.ai" class="icon-link" target="_blank"><i class="fab fa-github"></i></a></b></b></p>
+                <video controls>
+                    <source src="https://deniseyeo.github.io/videos/stride.mp4" type="video/mp4">
+                </video>
+                <p><b>Running Coach Chatbot</b></p>
+                <p>A chatbot that helps improve running performance by analyzing data from Strava.</p>
+
+                <p><b>Tools Used</b> Flask, LangChain, SQLite, Strava API</p>
+                <video controls>
+                    <source src="https://deniseyeo.github.io/videos/running_buddy.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>CONTACT</h2>
+            <p>
+                <b><a href="mailto:deniseyeosl[at]gmail.com" class="icon-link" style="margin-right: 10px;"><i class="fas fa-envelope"></i></a></b> 
+                <b><a href="https://github.com/deniseyeo" class="icon-link" target="_blank"><i class="fab fa-github"></i></a></b>
+            </p>
+            
+        </section>
+    </div>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQFW238J"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+</html>

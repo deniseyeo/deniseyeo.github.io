@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- 
+        <!-- 
         
     🔍 WELL HELLO THERE! 👋
     
@@ -15,151 +15,210 @@
     Thanks for checking out my source code!
     Feel free to connect with me on GitHub: https://github.com/deniseyeo
     
-    🎨 Built with curiosity and creativity
+    🎨 
     -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KQFW238J');</script>
-    <!-- End Google Tag Manager -->
     <title>Denise Yeo</title>
     <style>
-        /* CSS Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* SVG Filter for Noise */
-        svg {
-            position: absolute;
-            width: 0;
-            height: 0;
-        }
-
         body {
-            font-family: 'Courier Prime', serif;
-            line-height: 1.6;
-            font-size: 14px;
-            color: #333;
+            background-color: #000;
+            color: #0f0;
+            font-family: 'Iosevka', 'Courier New', monospace;
             padding: 20px;
+            min-height: 100vh;
+            cursor: text;
+            font-size: 14px;
         }
 
-        .container {
-            max-width: 800px;
+        #terminal {
+            max-width: 900px;
             margin: 0 auto;
-            padding: 0 20px;
         }
 
-        h1 {
-            text-align: center;
-            font-family: 'Silkscreen', serif;
-            font-size: clamp(32px, 6vw, 40px);
-            background: -webkit-linear-gradient(#000000, #a7a7a7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 40px;
+        .line {
+            margin-bottom: 5px;
+            line-height: 1.4;
         }
 
-        h2 {
-            font-family: 'Courier Prime', serif;
-            background: linear-gradient(45deg, #bababa, #ffffff);
-            color: rgb(61, 61, 61);
-            letter-spacing: 2px;
-            display: inline-block;
-            line-height: 1.2;
-            font-size: clamp(14px, 4vw, 16px);
-            padding: 2px 6px;
-            margin-bottom: 20px;
-            filter: url(#noise);
+        .output { color: #0f0; }
+        .error { color: #f00; }
+        .success { color: #0ff; }
+
+        #input-line {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
         }
 
-        a.icon-link {
-            color: #333;
-            text-decoration: none;
+        #prompt {
+            color: #0f0;
+            margin-right: 10px;
         }
 
-        a.icon-link:hover, a.icon-link:active, a.icon-link:visited {
-            color: #333;
+        #user-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #0f0;
+            font-family: 'Iosevka', 'Courier New', monospace;
+            font-size: 14px;
+            caret-color: #0f0;
         }
 
-        section {
-            margin: 40px 0;
+        #cursor {
+            color: #0f0;
+            animation: blink 1s infinite;
+            margin-left: 2px;
         }
 
-        p {
-            margin-bottom: 15px;
-        }
-
-        .project {
-            border-radius: 5px;
-        }
-
-        video {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
-            margin: 20px 0;
-            border-radius: 8px;
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Denise Yeo</h1>
-        </header>
-
-        <section id="about">
-            <h2>ABOUT ME</h2>
-            <p>Hi 👋 I'm Denise. I am passionate about analytics, data science and AI. I'm based in London and have held numerous roles in data science and analytics.</p>
-        </section>
-
-        <section id="projects">
-            <h2>PROJECTS</h2>
-            <div class="project">
-                <p>Outside of work, I enjoy building things. Here are some of my personal projects I've worked on:</p>
-                <p><b>Stride: AI-powered Running Plans</b></p>
-                <p>Stride helps runners prepare for races with AI-powered training plans.</p>
-
-                <p><b>Tools Used</b> FastAPI, TypeScript, LangChain, Anthropic API, SQLite, Strava API</p>
-                <p><b>Repo                 <b><a href="https://github.com/deniseyeo/stride.ai" class="icon-link" target="_blank"><i class="fab fa-github"></i></a></b></b></p>
-                <video controls>
-                    <source src="https://deniseyeo.github.io/videos/stride.mp4" type="video/mp4">
-                </video>
-                <p><b>Running Coach Chatbot</b></p>
-                <p>A chatbot that helps improve running performance by analyzing data from Strava.</p>
-
-                <p><b>Tools Used</b> Flask, LangChain, SQLite, Strava API</p>
-                <video controls>
-                    <source src="https://deniseyeo.github.io/videos/running_buddy.mp4" type="video/mp4">
-                </video>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>CONTACT</h2>
-            <p>
-                <b><a href="mailto:deniseyeosl[at]gmail.com" class="icon-link" style="margin-right: 10px;"><i class="fas fa-envelope"></i></a></b> 
-                <b><a href="https://github.com/deniseyeo" class="icon-link" target="_blank"><i class="fab fa-github"></i></a></b>
-            </p>
-            
-        </section>
+    <div id="terminal">
+        <div id="history"></div>
+        <div id="input-line">
+            <span id="prompt">$</span>
+            <input type="text" id="user-input" autofocus autocomplete="off" spellcheck="false">
+            <span id="cursor">▊</span>
+        </div>
     </div>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQFW238J"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+
+    <script>
+
+        var historyDiv = document.getElementById('history');
+        var userInput = document.getElementById('user-input');
+
+        var now = new Date();
+        var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        
+        var day = days[now.getDay()];
+        var month = months[now.getMonth()];
+        var date = now.getDate();
+        var hours = String(now.getHours()).padStart(2, '0');
+        var minutes = String(now.getMinutes()).padStart(2, '0');
+        var seconds = String(now.getSeconds()).padStart(2, '0');
+        
+        var timestamp = day + ' ' + month + ' ' + (date < 10 ? ' ' + date : date) + ' ' + hours + ':' + minutes + ':' + seconds;
+        
+        addLine('Last login: ' + timestamp, 'output');
+        addLine('Type "help" for available commands', 'output');
+        addLine('', 'output');
+
+        document.body.addEventListener('click', function() {
+            userInput.focus();
+        });
+
+        userInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                var command = userInput.value.trim();
+                addLine('$ ' + userInput.value, 'output');
+                userInput.value = '';
+                
+                if (command) {
+                    handleCommand(command.toLowerCase());
+                } else {
+                    addLine('', 'output');
+                }
+            }
+        });
+
+        var routes = {
+            about: 'about',
+            contact: 'contact'
+        };
+
+        function addLine(text, type) {
+            var line = document.createElement('div');
+            line.className = 'line ' + type;
+            line.textContent = text;
+            historyDiv.appendChild(line);
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+
+        function handleCommand(cmd) {
+            if (cmd === 'help') {
+                addLine('  about ', 'output');
+                addLine('  contact ', 'output');
+                addLine('  clear', 'output');
+                addLine('', 'output');
+            } 
+            else if (cmd === 'about') {
+                addLine("Hi 👋 I'm Denise. I'm based in London and have held numerous roles in data science and analytics. I am passionate about building scalable and impactful analytics.", 'output');
+                addLine('', 'output');
+                addLine('I love running outdoors, listening to podcasts, all things dogs and reading.', 'output');
+            }
+            else if (cmd === 'contact') {
+                var emailLine = document.createElement('div');
+                emailLine.className = 'line output';
+                emailLine.innerHTML = '✉️ <a href="mailto:deniseyeosl@gmail.com" style="color: #0ff; text-decoration: underline;">Email</a>';
+                historyDiv.appendChild(emailLine);
+                
+                var githubLine = document.createElement('div');
+                githubLine.className = 'line output';
+                githubLine.innerHTML = '💼 <a href="https://github.com/deniseyeo" target="_blank" style="color: #0ff; text-decoration: underline;">Github</a>';
+                historyDiv.appendChild(githubLine);
+                
+                addLine('', 'output');
+            }
+            else if (cmd === 'clear') {
+                historyDiv.innerHTML = '';
+                var now = new Date();
+                var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+                
+                var day = days[now.getDay()];
+                var month = months[now.getMonth()];
+                var date = now.getDate();
+                var hours = String(now.getHours()).padStart(2, '0');
+                var minutes = String(now.getMinutes()).padStart(2, '0');
+                var seconds = String(now.getSeconds()).padStart(2, '0');
+                
+                var timestamp = day + ' ' + month + ' ' + (date < 10 ? ' ' + date : date) + ' ' + hours + ':' + minutes + ':' + seconds;
+                
+                addLine('Last login: ' + timestamp, 'output');
+                addLine('Type "help" for available commands', 'output');
+                addLine('', 'output');
+            }
+            else if (cmd.indexOf('goto ') === 0) {
+                var page = cmd.slice(5).trim();
+                if (routes[page]) {
+                    addLine('Navigating to ' + page + '...', 'output');
+                    addLine('', 'output');
+                    setTimeout(function() {
+                        window.location.href = routes[page];
+                    }, 500);
+                } else {
+                    addLine('Error: Page "' + page + '" not found', 'error');
+                    addLine('Type "ls" to see available pages', 'output');
+                    addLine('', 'output');
+                }
+            }
+            else if (routes[cmd]) {
+                addLine('Navigating to ' + cmd + '...', 'output');
+                addLine('', 'output');
+                setTimeout(function() {
+                    window.location.href = routes[cmd];
+                }, 500);
+            }
+            else {
+                addLine('Command not found: ' + cmd, 'error');
+                addLine('Type "help" for available commands', 'output');
+                addLine('', 'output');
+            }
+        }
+    </script>
 </body>
 </html>
