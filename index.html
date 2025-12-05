@@ -114,7 +114,7 @@
         var timestamp = day + ' ' + month + ' ' + (date < 10 ? ' ' + date : date) + ' ' + hours + ':' + minutes + ':' + seconds;
         
         addLine('Last login: ' + timestamp, 'output');
-        addLine('Type "help" for available commands', 'output');
+        addLine('Type "welcome" for available commands', 'output');
         addLine('', 'output');
 
         document.body.addEventListener('click', function() {
@@ -149,7 +149,7 @@
         }
 
         function handleCommand(cmd) {
-            if (cmd === 'help') {
+            if (cmd === 'welcome') {
                 addLine('  about ', 'output');
                 addLine('  contact ', 'output');
                 addLine('  clear', 'output');
@@ -189,7 +189,7 @@
                 var timestamp = day + ' ' + month + ' ' + (date < 10 ? ' ' + date : date) + ' ' + hours + ':' + minutes + ':' + seconds;
                 
                 addLine('Last login: ' + timestamp, 'output');
-                addLine('Type "help" for available commands', 'output');
+                addLine('Type "welcome" for available commands', 'output');
                 addLine('', 'output');
             }
             else if (cmd.indexOf('goto ') === 0) {
@@ -215,7 +215,7 @@
             }
             else {
                 addLine('Command not found: ' + cmd, 'error');
-                addLine('Type "help" for available commands', 'output');
+                addLine('Type "welcome" for available commands', 'output');
                 addLine('', 'output');
             }
         }
